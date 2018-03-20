@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/jpa 
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+	
+	<!-- 加载mail.properties属性文件 -->
+	<context:property-placeholder location="classpath:mail.properties"/>
+	
+	
+	
+	<!-- Spring整合JavaMail的入门程序，编写mail.properties属性文件的方式 -->
+	<!-- 配置邮件 -->
+	<bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="${mail.from}"/> 
+	</bean>
+	
+	<!-- 配置邮件发送对象 -->
+	<bean id="javaMailSenderImpl" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="host" value="${mail.host}"/>
+		<property name="username" value="${mail.username}"/>
+		<property name="password" value="${mail.password}"/>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+<!-- 	<bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage"> -->
+<!-- 		<property name="from" value="aaa@ee298.com"/> -->
+<!-- 	</bean> -->
+
+	
+<!-- 	 配置邮件发送对象  -->
+<!-- 	<bean id="javaMailSenderImpl" class="org.springframework.mail.javamail.JavaMailSenderImpl"> -->
+<!-- 		<property name="defaultEncoding" value="UTF-8"/> -->
+<!-- 		<property name="host" value="localhost"/> -->
+<!-- 		<property name="username" value="aaa"/> -->
+<!-- 		<property name="password" value="123"/> -->
+<!-- 		<property name="javaMailProperties"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="mail.smtp.auth">true</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+		
+</beans>
+
+
+
+
+
+
+

@@ -1,0 +1,903 @@
+2018-01-28 17:52:25,805 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-28 17:52:25,838 33     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9d1e83, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13e55db, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@176a8c8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@14322d1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@a30589, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c07930]
+2018-01-28 17:52:26,055 250    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-28 17:52:27,077 1272   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@15e3b92: startup date [Sun Jan 28 17:52:27 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 17:52:27,520 1715   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-28 17:52:27,971 2166   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-28 17:52:28,399 2594   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-28 17:52:28,438 2633   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-28 17:52:28,594 2789   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-28 17:52:28,597 2792   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-28 17:52:28,598 2793   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-28 17:52:28,688 2883   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-28 17:52:28,990 3185   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31src29tgp57f11c6y2mu|1c2c35, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31src29tgp57f11c6y2mu|1c2c35, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-28 17:52:29,357 3552   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-28 17:52:29,521 3716   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-28 17:52:29,848 4043   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-28 17:52:30,044 4239   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-28 17:52:30,199 4394   [           main] WARN  anvalidation.TypeSafeActivator  - HHH000274: Unable to apply constraints on DDL for cn.itcast.domain.Dept
+javax.validation.ValidationException: HV000183: Unable to load 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.hibernate.validator.internal.engine.ValidatorFactoryImpl.createValidator(ValidatorFactoryImpl.java:339)
+	at org.hibernate.validator.internal.engine.ValidatorFactoryImpl.getValidator(ValidatorFactoryImpl.java:256)
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.applyDDL(TypeSafeActivator.java:207)
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.applyRelationalConstraints(TypeSafeActivator.java:191)
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.applyRelationalConstraints(TypeSafeActivator.java:150)
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:132)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:278)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:135)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2018-01-28 17:52:31,007 5202   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:52:31,024 5219   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:52:31,563 5758   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    41521 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:52:31,733 5928   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    16328 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    104607152 nanoseconds spent preparing 1 JDBC statements;
+    7739624 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:52:31,746 5941   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@15e3b92: startup date [Sun Jan 28 17:52:27 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 17:52:31,748 5943   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-28 17:54:58,187 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-28 17:54:58,219 32     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a30589, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c07930, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@544b02, org.springframework.test.context.support.DirtiesContextTestExecutionListener@87286, org.springframework.test.context.transaction.TransactionalTestExecutionListener@96d92e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@18c5b4f]
+2018-01-28 17:54:58,403 216    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-28 17:54:59,343 1156   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@14d6112: startup date [Sun Jan 28 17:54:59 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 17:54:59,696 1509   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-28 17:55:00,112 1925   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-28 17:55:00,528 2341   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-28 17:55:00,566 2379   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-28 17:55:00,727 2540   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-28 17:55:00,731 2544   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-28 17:55:00,733 2546   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-28 17:55:00,825 2638   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-28 17:55:01,126 2939   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31src29tgp8gtg1r5lmsi|3b8d23, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31src29tgp8gtg1r5lmsi|3b8d23, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-28 17:55:01,411 3224   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-28 17:55:01,562 3375   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-28 17:55:01,890 3703   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-28 17:55:02,095 3908   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-28 17:55:03,073 4886   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:55:03,103 4916   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:55:03,571 5384   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    38255 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:55:03,718 5531   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    14929 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    97592039 nanoseconds spent preparing 1 JDBC statements;
+    1846967 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 17:55:03,730 5543   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@14d6112: startup date [Sun Jan 28 17:54:59 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 17:55:03,737 5550   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-28 18:06:47,586 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-28 18:06:47,618 32     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e99cbb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@130e79e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1b64611, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b228d1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@195ecae, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1e5aefe]
+2018-01-28 18:06:47,833 247    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-28 18:06:48,961 1375   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@ced8c6: startup date [Sun Jan 28 18:06:48 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 18:06:49,430 1844   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-28 18:06:49,871 2285   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-28 18:06:50,422 2836   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-28 18:06:50,460 2874   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-28 18:06:50,679 3093   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-28 18:06:50,684 3098   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-28 18:06:50,687 3101   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-28 18:06:50,846 3260   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-28 18:06:51,265 3679   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31src29tgpnog25qjghi|102c186, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31src29tgpnog25qjghi|102c186, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-28 18:06:51,649 4063   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-28 18:06:51,902 4316   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-28 18:06:52,288 4702   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-28 18:06:52,539 4953   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-28 18:06:53,820 6234   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 18:06:53,855 6269   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 18:10:08,512 200926 [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    2250975 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 18:10:08,761 201175 [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    19128 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    145389699 nanoseconds spent preparing 1 JDBC statements;
+    10758963 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-28 18:10:08,779 201193 [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@ced8c6: startup date [Sun Jan 28 18:06:48 GMT+08:00 2018]; root of context hierarchy
+2018-01-28 18:10:08,781 201195 [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:08:39,768 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:08:39,811 43     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e0bf98, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@42bb13, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@107e4bc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@139f953, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11fb8c6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19bd1ca]
+2018-01-29 15:08:40,163 395    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:08:41,707 1939   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@f472ff: startup date [Mon Jan 29 15:08:41 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:08:42,223 2455   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:08:42,747 2979   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:08:43,321 3553   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:08:43,357 3589   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:08:43,560 3792   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:08:43,564 3796   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:08:43,567 3799   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:08:43,689 3921   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:08:44,058 4290   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9thyqgu31o8rd8|1643e65, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9thyqgu31o8rd8|1643e65, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:08:44,463 4695   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:08:44,717 4949   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:08:45,146 5378   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:08:45,424 5656   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:08:46,999 7231   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:08:47,035 7267   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:08:47,788 8020   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:08:48,534 8766   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    149290 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    260242894 nanoseconds spent preparing 1 JDBC statements;
+    27736127 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    26593 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:08:48,543 8775   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@f472ff: startup date [Mon Jan 29 15:08:41 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:08:48,551 8783   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:13:57,069 1      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:13:57,105 37     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e0bf98, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@42bb13, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@107e4bc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@139f953, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11fb8c6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19bd1ca]
+2018-01-29 15:13:57,353 285    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:13:58,511 1443   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@f472ff: startup date [Mon Jan 29 15:13:58 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:13:58,983 1915   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:13:59,434 2366   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:13:59,942 2874   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:13:59,992 2924   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:14:00,185 3117   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:14:00,189 3121   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:14:00,192 3124   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:14:00,311 3243   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:14:00,712 3644   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9thyx98d2ucw0s|3c86bc, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9thyx98d2ucw0s|3c86bc, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:14:01,094 4026   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:14:01,320 4252   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:14:01,688 4620   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:14:01,943 4875   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:14:03,144 6076   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:14:03,165 6097   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:14:03,773 6705   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:14:04,275 7207   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    76044 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    208736143 nanoseconds spent preparing 1 JDBC statements;
+    6072351 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    19595 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:14:04,285 7217   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@f472ff: startup date [Mon Jan 29 15:13:58 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:14:04,287 7219   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:16:50,396 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:16:50,441 45     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@107e4bc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@139f953, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@11fb8c6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19bd1ca, org.springframework.test.context.transaction.TransactionalTestExecutionListener@ea58e3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@171ccb0]
+2018-01-29 15:16:50,678 282    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:16:51,823 1427   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@e2e687: startup date [Mon Jan 29 15:16:51 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:16:52,214 1818   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:16:52,676 2280   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:16:53,181 2785   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:16:53,214 2818   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:16:53,397 3001   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:16:53,400 3004   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:16:53,402 3006   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:16:53,513 3117   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:16:53,858 3462   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9thz0ywigabdz5|1a33470, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9thz0ywigabdz5|1a33470, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:16:54,223 3827   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:16:54,413 4017   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:16:54,757 4361   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:16:54,985 4589   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:16:56,151 5755   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:16:56,172 5776   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:16:56,750 6354   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:16:57,253 6857   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    44787 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    175625593 nanoseconds spent preparing 2 JDBC statements;
+    9766334 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    26126 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:16:57,263 6867   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@e2e687: startup date [Mon Jan 29 15:16:51 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:16:57,266 6870   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:47:01,688 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:47:01,732 44     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@190c5c0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a6c214, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@10fba26, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18651db, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1681629, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@86f716]
+2018-01-29 15:47:01,952 264    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:47:03,133 1445   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@11beb4d: startup date [Mon Jan 29 15:47:03 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:47:03,554 1866   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:47:04,040 2352   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:47:04,579 2891   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:47:04,621 2933   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:47:04,823 3135   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:47:04,826 3138   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:47:04,828 3140   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:47:04,947 3259   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:47:05,322 3634   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9ti03sjmt2zqxc|1f7057, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9ti03sjmt2zqxc|1f7057, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:47:05,711 4023   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:47:05,934 4246   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:47:06,308 4620   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:47:06,547 4859   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:47:07,762 6074   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:47:07,791 6103   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:47:07,911 6223   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:47:08,130 6442   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:47:08,897 7209   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    141359 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    210468368 nanoseconds spent preparing 1 JDBC statements;
+    16954158 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:47:08,903 7215   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@11beb4d: startup date [Mon Jan 29 15:47:03 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:47:08,905 7217   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:52:06,231 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:52:06,267 36     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d23632, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1e42d5a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@15d70ae, org.springframework.test.context.support.DirtiesContextTestExecutionListener@190c5c0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a6c214, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10fba26]
+2018-01-29 15:52:06,518 287    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:52:07,730 1499   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@113c116: startup date [Mon Jan 29 15:52:07 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:52:08,181 1950   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:52:08,651 2420   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:52:09,169 2938   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:52:09,208 2977   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:52:09,404 3173   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:52:09,408 3177   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:52:09,410 3179   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:52:09,528 3297   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:52:09,933 3702   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9ti0abl4c3z9yf|dfb9cd, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9ti0abl4c3z9yf|dfb9cd, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:52:10,324 4093   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:52:10,544 4313   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:52:10,935 4704   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:52:11,192 4961   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:52:12,415 6184   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:12,441 6210   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:12,517 6286   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:12,542 6311   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:12,585 6354   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:12,647 6416   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:52:12,856 6625   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:13,609 7378   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    56917 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    116962742 nanoseconds spent preparing 1 JDBC statements;
+    7694942 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:52:13,624 7393   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@113c116: startup date [Mon Jan 29 15:52:07 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:52:13,627 7396   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:55:08,112 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 15:55:08,155 43     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1681629, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@86f716, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@c7da23, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c24ae7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c39aa6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@de0c45]
+2018-01-29 15:55:08,374 262    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 15:55:09,576 1464   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@3cb1e1: startup date [Mon Jan 29 15:55:09 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:55:09,990 1878   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 15:55:10,465 2353   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 15:55:10,973 2861   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 15:55:11,008 2896   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 15:55:11,208 3096   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 15:55:11,211 3099   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 15:55:11,214 3102   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 15:55:11,346 3234   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 15:55:11,726 3614   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9ti0e7vlps01zz|1947a96, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9ti0e7vlps01zz|1947a96, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 15:55:12,088 3976   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 15:55:12,293 4181   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 15:55:12,669 4557   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 15:55:12,898 4786   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 15:55:14,123 6011   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,143 6031   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,220 6108   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,240 6128   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,288 6176   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,290 6178   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,291 6179   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,292 6180   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:14,339 6227   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 15:55:14,582 6470   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:15,360 7248   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    32657 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    105934445 nanoseconds spent preparing 2 JDBC statements;
+    8275771 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 15:55:15,371 7259   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@3cb1e1: startup date [Mon Jan 29 15:55:09 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 15:55:15,373 7261   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-29 16:03:45,501 0      [           main] INFO  DefaultTestContextBootstrapper  - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-01-29 16:03:45,540 39     [           main] INFO  DefaultTestContextBootstrapper  - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1c39aa6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@de0c45, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1f7a434, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13d76d5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44c4a4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ca2076]
+2018-01-29 16:03:45,766 265    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-01-29 16:03:46,941 1440   [           main] INFO  port.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@1542c06: startup date [Mon Jan 29 16:03:46 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 16:03:47,364 1863   [           main] INFO         com.mchange.v2.log.MLog  - MLog clients using log4j logging.
+2018-01-29 16:03:47,826 2325   [           main] INFO  m.mchange.v2.c3p0.C3P0Registry  - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+2018-01-29 16:03:48,340 2839   [           main] INFO  tainerEntityManagerFactoryBean  - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-29 16:03:48,383 2882   [           main] INFO  te.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-29 16:03:48,588 3087   [           main] INFO           org.hibernate.Version  - HHH000412: Hibernate Core {5.0.7.Final}
+2018-01-29 16:03:48,591 3090   [           main] INFO   org.hibernate.cfg.Environment  - HHH000206: hibernate.properties not found
+2018-01-29 16:03:48,594 3093   [           main] INFO   org.hibernate.cfg.Environment  - HHH000021: Bytecode provider name : javassist
+2018-01-29 16:03:48,712 3211   [           main] INFO  ate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-29 16:03:49,085 3584   [           main] INFO  l.AbstractPoolBackedDataSource  - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 31srsd9ti0pb2t1jpejte|665fb2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 31srsd9ti0pb2t1jpejte|665fb2, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:oracle:thin:@192.168.100.56:1521:orcl, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-01-29 16:03:49,486 3985   [           main] INFO   org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2018-01-29 16:03:49,703 4202   [           main] INFO  internal.LobCreatorBuilderImpl  - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-01-29 16:03:50,107 4606   [           main] WARN  .hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-01-29 16:03:50,361 4860   [           main] INFO  alidator.internal.util.Version  - HV000001: Hibernate Validator 5.2.1.Final
+2018-01-29 16:03:51,731 6230   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,756 6255   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,848 6347   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,865 6364   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,908 6407   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,910 6409   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,912 6411   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,913 6412   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:51,978 6477   [           main] INFO  ueryTranslatorFactoryInitiator  - HHH000397: Using ASTQueryTranslatorFactory
+2018-01-29 16:03:52,203 6702   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:53,051 7550   [           main] INFO  calLoggingSessionEventListener  - Session Metrics {
+    43854 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    175829000 nanoseconds spent preparing 1 JDBC statements;
+    7629627 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2018-01-29 16:03:53,058 7557   [       Thread-5] INFO  port.GenericApplicationContext  - Closing org.springframework.context.support.GenericApplicationContext@1542c06: startup date [Mon Jan 29 16:03:46 GMT+08:00 2018]; root of context hierarchy
+2018-01-29 16:03:53,060 7559   [       Thread-5] INFO  tainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-01-31 16:24:58,030 0      [           main] INFO  stractValidatingSessionManager  - Enabling session validation scheduler...
